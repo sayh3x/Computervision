@@ -5,5 +5,5 @@ val: images/val
 
 nc: 2
 names:
-  0: normal
-  1: fall
+  0: fall
+  1: normal
