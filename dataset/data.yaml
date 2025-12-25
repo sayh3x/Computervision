@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['person']
+
+roboflow:
+  workspace: elevator-hm4gv
+  project: people-ditection-in-elevator
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/elevator-hm4gv/people-ditection-in-elevator/dataset/2

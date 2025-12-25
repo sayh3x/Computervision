@@ -1,0 +1,9 @@
+path: ../fall_dataset
+
+train: images/train
+val: images/val
+
+nc: 2
+names:
+  0: normal
+  1: fall
