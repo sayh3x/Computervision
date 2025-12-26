@@ -1,5 +1,17 @@
 from pathlib import Path
+import os
 
+
+class Settings:
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+
+    MODEL_PATH = os.path.join(BASE_DIR, "models", "best.pt")
+
+    CAMERA_ID = 0        # USB Camera / IP Camera
+    HOST = "0.0.0.0"
+    PORT = 8000
+
+    FALL_COOLDOWN_SEC = 10
 
 # ========= PATHS =========
 BASE_DIR = Path(__file__).resolve().parents[2]
@@ -17,7 +29,7 @@ COOLDOWN_SECONDS = 10
 API_HOST = "127.0.0.1"
 API_PORT = 8000
 API_URL = f"http://{API_HOST}:{API_PORT}/fall-event"
-MODEL_PATH = "models/best.pt" 
+# MODEL_PATH = "models/best.pt" 
 VIDEO_SOURCE = "input.mp4" # 0 for webcam 
 FALL_CLASS_ID = 0 
 CONF_THRESHOLD = 0.6 

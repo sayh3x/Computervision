@@ -3,5 +3,5 @@ opencv-python
 fastapi
 uvicorn
 requests
-collections
 scipy
+numpy

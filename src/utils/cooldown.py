@@ -7,9 +7,9 @@ class Cooldown:
         self.last_time = 0
 
 
-def ready(self):
-    now = time.time()
-    if now - self.last_time > self.seconds:
-        self.last_time = now
-        return True
-    return False
+    def ready(self):
+        now = time.time()
+        if now - self.last_time > self.seconds:
+            self.last_time = now
+            return True
+        return False
