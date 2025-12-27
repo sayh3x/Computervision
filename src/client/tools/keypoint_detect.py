@@ -1,6 +1,7 @@
 from ultralytics import YOLO
 import cv2
 import numpy as np
+from src.config.settings import MODEL_PATH
 
 # Keypoint names corresponding to YOLO pose output indices
 keypoint_names = [
@@ -11,7 +12,7 @@ keypoint_names = [
 ]
 
 # Load YOLO pose model
-model = YOLO("yolo11s-pose.pt")
+model = YOLO(str(MODEL_PATH))
 
 # Open webcam
 cap = cv2.VideoCapture(0)

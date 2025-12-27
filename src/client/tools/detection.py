@@ -1,7 +1,8 @@
 from ultralytics import YOLO
+from src.config.settings import MODEL_PATH
 
 
-model = YOLO('best.pt')
+model = YOLO(str(MODEL_PATH))
 
 results = model('not fallen031.jpg')
 

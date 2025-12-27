@@ -1,5 +1,5 @@
 from ultralytics import YOLO
-from src.config.settings import MODEL_PATH, CONF_THRESHOLD, FALL_CLASS_ID, COOLDOWN_SECONDS, API_URL
+from src.config.settings import MODEL_PATH
 import cv2
 
 model = YOLO(str(MODEL_PATH))   #  yolov10s-pose.pt

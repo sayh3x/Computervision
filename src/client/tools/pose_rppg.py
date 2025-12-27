@@ -1,4 +1,3 @@
-# rppg_pose_merged.py
 """
 Merged code:
 - Keypoint detection using YOLO pose (ultralytics)
@@ -14,10 +13,11 @@ import time
 from collections import deque
 from scipy import signal
 from ultralytics import YOLO
+from src.config.settings import MODEL_PATH
 
 # ---------- Configuration ----------
 CAM_ID = 0
-MODEL_PATH = "yolo11s-pose.pt"  # Path to your pose model
+# MODEL_PATH = "yolo11s-pose.pt"  # Path to your pose model
 FRAME_WIDTH = 1280
 FRAME_HEIGHT = 720
 FPS = 30  # Target FPS; actual sampling is computed from timestamps
@@ -32,7 +32,7 @@ KP_CONF_THRESH = 0.3  # Confidence threshold for keypoints
 current_method = 'CHROM'
 
 # ---------- Load pose model ----------
-model = YOLO(MODEL_PATH)
+model = YOLO(str(MODEL_PATH))
 
 # ---------- Haar cascade fallback ----------
 face_cascade = cv2.CascadeClassifier(
