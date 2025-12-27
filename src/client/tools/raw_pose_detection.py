@@ -1,7 +1,8 @@
 from ultralytics import YOLO
+from src.config.settings import MODEL_PATH, CONF_THRESHOLD, FALL_CLASS_ID, COOLDOWN_SECONDS, API_URL
 import cv2
 
-model = YOLO("yolov8n-pose.pt")   #  yolov10s-pose.pt
+model = YOLO(str(MODEL_PATH))   #  yolov10s-pose.pt
 
 # cap = cv2.VideoCapture(0)
 cap = cv2.VideoCapture(0)
